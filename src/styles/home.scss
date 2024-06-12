@@ -1,0 +1,134 @@
+@import "../styles/colors.scss";
+
+.user-logo {
+  background: green;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.profile {
+  @include flex(row, start, center);
+  gap: 8px;
+}
+
+.user-info {
+  @include flex(column, start, start);
+}
+
+.tasks {
+  border-radius: 8px;
+  background: $footer-bg;
+  padding: 4px 8px;
+}
+
+.tasks-icon {
+  @include flex(row, center, center);
+  gap: 8px;
+}
+
+.home-header {
+  padding: $main-padding;
+  @include flex(row, space-between, start);
+}
+
+.home-tasks {
+  @include flex(column, start, flex-end);
+  gap: 4px;
+}
+
+.home-game {
+  margin: 0 $main-padding;
+
+  h1 {
+    margin-bottom: 4px;
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  .grey-text {
+    margin: 4px 0 8px 0;
+  }
+
+  button {
+    padding: 4px 42px;
+    margin-top: 8px;
+  }
+}
+.mining {
+  padding: $main-padding;
+  .grey-text {
+    text-align: center;
+  }
+}
+.home-car{
+  rotate: 270deg;
+  margin-right: 16px;
+}
+.main-logo-content {
+  width: 100%;
+  height: 210px;
+  background: url("../assets/images/main-home.png") center no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 28px;
+
+  span {
+    font-size: 16px;
+    line-height: 22px;
+    color: $input-plach-text;
+  }
+
+  p {
+    font-size: 36px;
+    line-height: 42px;
+  }
+}
+
+.percentage-line-container {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  line-height: 22px;
+  color: white;
+  margin-top: 20px;
+  padding: 14px 10px;
+  border-radius: 16px;
+}
+
+.percentage-line-fill {
+  transition: width 0.3s ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.percentage-line-text {
+  position: relative;
+  z-index: 1;
+}
+
+.main-content {
+  .grey-text {
+    margin-top: 12px;
+  }
+}
+
+.game-lives {
+  @include flex(column, center, start);
+  gap: 4px;
+  img {
+    width: 16px;
+    height: 16px;
+  }
+  .grey-text{
+    margin:0 !important;
+  }
+}
